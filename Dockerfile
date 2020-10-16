@@ -1,7 +1,7 @@
 ARG S6_ARCH
 FROM oznu/s6-node:12.19.0-${S6_ARCH:-amd64}
 
-RUN apk add --no-cache git python make g++ avahi-compat-libdns_sd avahi-dev dbus \
+RUN apk add --no-cache git python3 make g++ avahi-compat-libdns_sd avahi-dev dbus \
     iputils sudo nano \
   && chmod 4755 /bin/ping \
   && mkdir /homebridge \
